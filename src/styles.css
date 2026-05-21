@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f7f2ea;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #dce4e6;
+  color: #272522;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .section-kicker {
+    @apply mb-3 text-xs font-bold uppercase tracking-[0.18em] text-clay;
+  }
+
+  .section-title {
+    @apply font-serif text-3xl font-semibold text-charcoal sm:text-4xl;
+  }
+
+  .section-copy {
+    @apply mt-4 max-w-3xl text-base leading-8 text-stoneText sm:text-lg;
+  }
+
+  .soft-card {
+    @apply rounded-2xl border border-charcoal/10 bg-white/[0.62] shadow-soft backdrop-blur;
+    transform: translateZ(0);
+  }
+
+  .button-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-charcoal px-5 py-3 text-sm font-semibold text-paper transition hover:bg-clay focus:outline-none focus:ring-2 focus:ring-clay focus:ring-offset-2 focus:ring-offset-paper;
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-charcoal/15 bg-white/[0.65] px-5 py-3 text-sm font-semibold text-charcoal transition hover:border-clay/40 hover:text-clay focus:outline-none focus:ring-2 focus:ring-clay focus:ring-offset-2 focus:ring-offset-paper;
+  }
+
+  .premium-button {
+    @apply relative overflow-hidden shadow-[0_14px_35px_rgba(39,37,34,0.08)];
+  }
+
+  .premium-button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-120%);
+    background: linear-gradient(110deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+    transition: transform 700ms ease;
+  }
+
+  .premium-button:hover::after {
+    transform: translateX(120%);
+  }
+
+  .background-grid {
+    background-image:
+      linear-gradient(rgba(39, 37, 34, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(39, 37, 34, 0.045) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), transparent 72%);
+  }
+
+  .perspective-card {
+    perspective: 1000px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes float-profile {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-0.5deg);
+  }
+  50% {
+    transform: translate3d(0, -14px, 0) rotate(0.7deg);
+  }
+}
+
+@keyframes quiet-pulse {
+  0%,
+  100% {
+    opacity: 0.52;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.05);
+  }
+}
+
+.float-profile {
+  animation: float-profile 7s ease-in-out infinite;
+}
+
+.quiet-pulse {
+  animation: quiet-pulse 6s ease-in-out infinite;
+}

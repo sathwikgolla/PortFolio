@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Sathwik Golla portfolio preview">
+  <rect width="1200" height="630" fill="#f7f2ea"/>
+  <rect x="70" y="70" width="1060" height="490" rx="36" fill="#fffaf2" stroke="#d8cabb"/>
+  <circle cx="982" cy="160" r="95" fill="#dce4e6"/>
+  <circle cx="1015" cy="492" r="130" fill="#e8ded1"/>
+  <text x="120" y="245" font-family="Georgia, serif" font-size="74" font-weight="700" fill="#272522">Sathwik Golla</text>
+  <text x="124" y="312" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#8a6048">Full Stack Developer | B.Tech CSE Student</text>
+  <text x="124" y="383" font-family="Inter, Arial, sans-serif" font-size="25" fill="#665f57">MERN stack projects, certifications, education, and recruiter-ready contact.</text>
+  <rect x="124" y="438" width="166" height="52" rx="26" fill="#272522"/>
+  <text x="207" y="472" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#f7f2ea">Portfolio</text>
+</svg>
